@@ -1,0 +1,48 @@
+body,html{
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    background-image: url(asset/bg001.png);
+    height: 100%;
+}
+.pb-4, .py-4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a:hover {
+    background-color: none;
+  }
+
+.game-box{
+    background: #eeeeee;
+    opacity: 80%;
+}
+.answer-item{
+    background: rgb(223, 201, 7);
+    width: 90%;
+    display: inline-block;
+    border-radius:8px;
+    padding: 3px;
+}
+.btn-primary {
+    background-color: #ffaaaa;
+    border: none;
+}
+
+.text-info {
+    color: #fb5b66! important;
+}
+
+#btn-start{
+    border:none;
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	background:#ffaaaa;
+    font:bold 40px;
+	color:#fff;
+}
+
+#code-title{
+    text-align: center;
+    font-weight: bold;
+}
