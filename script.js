@@ -1,3 +1,4 @@
+//Set variables for questions, timer and buttons.
 var quizQuestions = document.getElementById("quiz-questions");
 var timer = document.getElementById("timer");
 var btnStart = document.getElementById("btn-start");
@@ -12,11 +13,12 @@ var score = 0;
 var count = 75;
 var alert =document.getElementById("alert");
 var info = document.getElementById("info");
-// var addscore = document.getElementById("addscore");
-// var submitresult = document.getElementById("submitresult");
+
 var allScores = [];
 var viewScore = document.querySelector("#highScoresDiv");
 var storedScores = JSON.parse(localStorage.getItem("userData"));
+
+// Question source from W3school(https://www.w3schools.com/js/js_quiz.asp)
 var questions = [
     {
         title: "Where is the correct place to insert a JavaScript?",
@@ -44,6 +46,7 @@ var questions = [
         answer : "/*This comment has more than one line*/"    
     },
 ];
+
 btnStart.addEventListener("click", startQuiz);
 function startQuiz(){
     if(storedScores !==null) {
@@ -88,7 +91,7 @@ function displayQuestion(question){
      var button =document.createElement("button")
     button.className="btn-primary btn-block text-left"
     button.innerText=element
-    // questionanswers.innerHTML=""
+    
     questionanswers.appendChild(button)
     button.addEventListener("click", displaynextQuestion)
     });
@@ -130,7 +133,7 @@ function correction(response){
         }, 1000);
 }
  function endgame (){
-    // btnStart.classList.add("d-none")
+    
     myScore.innaText = count
     addscore.classList.remove("d-none")
     timecounter.classList.add("d-none")
